@@ -23,5 +23,4 @@ Things you may want to cover:
 
 * ...
 
-* 参加確認（chi-0920）
-
+テスト(uro)
