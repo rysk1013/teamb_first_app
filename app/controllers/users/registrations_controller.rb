@@ -2,7 +2,7 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
@@ -40,12 +40,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  # ユーザー情報を編集するためのストロングパラメーターを定義
+  # ユーザー情報を更新するためのストロングパラメーターを定義
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :skill])
   end
 
-  # パスワードなしでユーザー情報更新
+  # パスワードなしで更新を許可
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
