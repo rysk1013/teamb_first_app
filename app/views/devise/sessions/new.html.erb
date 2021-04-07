@@ -8,6 +8,10 @@
         <div class="description">
           <div class="information">ログイン</div>
         </div>
+        <div class="login-error-message">
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
         <div class="content">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field">
