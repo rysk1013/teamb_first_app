@@ -1,0 +1,218 @@
+/* ヘッダー */
+header {
+  background-color: #006992;
+  background: linear-gradient(to right, #006992 0%, #298AAA 34%, #51ACC2 58%, #7ACDDA 100%);
+  width: 100%;
+  height: 100px;
+  padding: 20px 0;
+}
+.header-inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #000, 0 0 10px #000;
+}
+.user-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.user-menu-item {
+  margin-right: 20px;
+}
+
+.app-logo {
+  width: 150px;
+}
+/* ヘッダーここまで */
+
+/* メイン */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.user-main {
+  display: flex;
+  flex: 1;
+  background: #A7DBF3;
+  background: linear-gradient(to right, #9cdbf8 0%, #bbe9f5 34%, #ccdde4 58%, #ecf4f6 100%);
+}
+.left-menu {
+  width: 330px;
+  left: 0;
+  padding-top: 50px;
+  padding-left: 30px;
+}
+.user-main-left li {
+  width: 300px;
+  height: 55px;
+  line-height: 55px;
+  border: solid 2px #615545;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #000, 0 0 10px #000;
+  background-color: #2b6f92;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+  transition: all 0.1s linear;
+  border-style: solid;
+  text-align: center;
+}
+.user-main-left li:hover {
+  opacity: 0.5;
+}
+/*センターコンテンツ*/
+.center-main {
+  flex: 1;
+}
+.profile-content {
+  display: flex;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  width: 800px;
+  margin: 0 auto 0 70px;
+}
+.profile_avatar {
+  top: -18px;
+  left: 0;
+  width: 104px;
+  height: 104px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.profile-avater-image {
+  width: 104px;
+  height: 104px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.profile-name {
+  font-size: 25px;
+  padding-left: 20px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+.box-base {
+  box-sizing: border-box;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  width: 800px;
+  margin: 0 auto;
+}
+.user-content {
+  width: 80%;
+  margin: 0 auto 0 70px;
+  background: linear-gradient(to bottom, #ece2c8 1%, #ccbf9e 40%, #cebb90 99%);
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 2px #615545;
+  box-shadow: 0 2px 1px rgb(0 0 0 / 30%), 0 6px 6px rgb(0 0 0 / 10%);
+}
+.box-base {
+  padding: 40px;
+  box-sizing: border-box;
+}
+.skil-text {
+  padding: 15px;
+  width: 90%;
+  height: 200px;
+  margin: 0 auto 20px;
+  background-color: #f2ead5;
+  border-radius: 3px;
+  border: solid 1px #615545;
+  outline: none;
+  box-shadow: none;
+}
+.title-area {
+  font-size: 22px;
+  font-weight: bold;
+  width: 650px;
+  margin: 0 auto 10px;
+}
+.page-bottom {
+  height: 70px;
+}
+.myteam,
+.entry-project {
+  width: 80%;
+  margin: 30px auto 0 70px;
+  background: linear-gradient(to bottom, #ece2c8 1%, #ccbf9e 40%, #cebb90 99%);
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 2px #615545;
+  box-shadow: 0 2px 1px rgb(0 0 0 / 30%), 0 6px 6px rgb(0 0 0 / 10%);
+}
+.myteam-title,
+.entry-title {
+  padding: 40px 40px 25px 40px;
+  width: 650px;
+  margin: 0 auto;
+}
+.myteam h2,
+.entry-project h2 {
+  border-bottom: solid 1px #615545;
+  box-shadow: 0 1px 0 white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.myteam-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.myteam-box {
+  width: 35%;
+  margin: 0 auto 30px;
+  background-color: #f2ead5;
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 1px #615545;
+}
+.myteam-name {
+  padding: 10px;
+  border-bottom: solid 1px #615545;
+  font-weight: bold;
+}
+.participant-user {
+  padding: 10px;
+}
+.participant-user ul li{
+  padding-bottom: 5px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #615545;
+}
+.index-user-name {
+  display: inline-block;
+}
+.approval-btn {
+  color: #fff;
+  text-shadow: 0 0 2px #000, 0 0 10px #000;
+  background-color: #2b6f92;
+  border-color: #25607e;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px;
+  margin-right: 6px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+  transition: all 0.1s linear;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+}
