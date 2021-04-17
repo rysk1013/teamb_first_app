@@ -1,7 +1,6 @@
 <div class="main">
-  <div class="head">
-    <%= link_to "トップページ", "#", class: "home" %>
-  </div>
+  <%= render 'shared/header' %>
+
   <div class="primary">
     <div class="section">
       <div class="tertiary">
@@ -39,7 +38,5 @@
       </div>
     </div>
   </div>
-  <div class="foot">
-    Copyright © TEAM-B All rights reserved.
-  </div>
+  <%= render 'shared/footer' %>
 </div>

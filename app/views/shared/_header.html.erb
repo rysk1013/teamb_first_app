@@ -1,0 +1,22 @@
+<header>
+  <div class="header-wrapper">
+    <div class="header-left">
+      <div class="header-logo">
+        <%= link_to image_tag("/images/header_logo.png", class: "header-logo-img"), root_path %>
+      </div>
+      <% if user_signed_in? %>
+        <span>ログインユーザー: <%= link_to "テストユーザー" %></span>
+      <% end %>
+    </div>
+    <div class="header-right">
+      <ul class="header-lists">
+        <% if user_signed_in? %>
+          <li class="logout"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li class="login"><%= link_to "ログイン", new_user_session_path %></li>
+          <li class="register"><%= link_to "新規登録", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</header>

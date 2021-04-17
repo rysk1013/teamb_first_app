@@ -1,16 +1,5 @@
 <body>
-  <header>
-    <div class="header-inner">
-      <h1 class="logo">
-        <img src="" alt="", class="app-logo">
-      </h1>
-        <div class="nav-item">
-          <ul class="user-menu">
-            <%=link_to "ログアウト", destroy_user_session_path, class: "user-menu-item" %>
-          </ul>
-        </div>
-    </div>
-  </header>
+  <%= render 'shared/header' %>
 
   <div class="user-main">
     <nav class="left-menu">
@@ -116,7 +105,5 @@
     </main>
   </div>
 
-  <div class="foot">
-    Copyright © TEAM-B All rights reserved.
-  </div>
+  <%= render 'shared/footer' %>
 </body>
