@@ -56,7 +56,7 @@ header {
 
 .login a,
 .register a {
-  background-color: #90ee90;
+  background-color: #006992;
   color: #fff;
   padding: 13px;
   border: 1px solid;
@@ -66,12 +66,12 @@ header {
 
 .login a:hover,
 .register a:hover {
-  background-color: #fff;
-  color: #90ee90;
+  background-color: #90ee90;
+  color: #fff;
 }
 
 .logout a {
-  background-color: #ffa500;
+  background-color: #006992;
   color: #fff;
   padding: 13px;
   border: 1px solid;
