@@ -1,0 +1,349 @@
+<header>
+  <div class="header-wrapper">
+    <div class="header-left">
+      <div class="header-logo">
+        <%= link_to image_tag("/images/header_logo.png", class: "header-logo-img") %>
+      </div>
+      <span>ログインユーザー: <%= link_to "テストユーザー" %></span>
+    </div>
+    <div class="header-right">
+      <ul class="header-lists">
+        <%# if user_signed_in? %>
+          <li class="logout"><%= link_to "ログアウト" %></li>
+        <%# else %>
+          <%# <li class="login"><%= link_to "ログイン" </li> %>
+          <%# <li class="register"><%= link_to "新規登録" </li> %>
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="projects-index-main">
+  <div class="side-bar">
+    <div class="side-contents">
+      <div class="side-search-box">
+        <label for=""></label>
+        <input class="side-input" type="text" placeholder="キーワード">
+        <input type="submit", value="検索" class="side-submit">
+      </div>
+
+      <div class="side-nav">
+        <a href="#">マイページ</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav１</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav２</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav３</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav４</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="main-title">
+      <h1 class="info-heading">お知らせ</h1>
+    </div>
+
+    <div class="info">
+      <p>インフォメーションが入ります</p>
+    </div>
+
+    <div class="posts-heading-wrapper">
+      <div class="main-title">
+        <h1>投稿一覧</h1>
+      </div>
+
+      <div class="post-new">
+        <a href="#">新規投稿作成</a>
+      </div>
+    </div>
+
+    <div class="posts">
+      <div class="post">
+        <div class="index-post-header">
+          <h2>プロジェクト名１</h2>
+          <div class="user-name">
+            <a href="#">投稿者の名前</a>
+          </div>
+        </div>
+        <div class="post-tags">
+          <div class="post-tag">
+            <a href="#">タグ１</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ２</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ３</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ４</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ５</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ６</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ７</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ８</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ９</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ１０</a>
+          </div>
+        </div>
+        <div class="post-info">
+          <h3>&lt;プロジェクト内容&gt;</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+
+        <div class="created-at">
+          <p>2021/04/02 00:00:00</p>
+        </div>
+
+        <div class="more">
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="index-post-header">
+          <h2>プロジェクト名２</h2>
+          <div class="user-name">
+            <a href="#">投稿者の名前</a>
+          </div>
+        </div>
+        <div class="post-tags">
+          <div class="post-tag">
+            <a href="#">タグ１</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ２</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ３</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ４</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ５</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ６</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ７</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ８</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ９</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ１０</a>
+          </div>
+        </div>
+        <div class="post-info">
+          <h3>&lt;プロジェクト内容&gt;</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+
+        <div class="created-at">
+          <p>2021/04/02 00:00:00</p>
+        </div>
+        
+        <div class="more">
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="index-post-header">
+          <h2>プロジェクト名３</h2>
+          <div class="user-name">
+            <a href="#">投稿者の名前</a>
+          </div>
+        </div>
+        <div class="post-tags">
+          <div class="post-tag">
+            <a href="#">タグ１</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ２</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ３</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ４</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ５</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ６</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ７</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ８</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ９</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ１０</a>
+          </div>
+        </div>
+        <div class="post-info">
+          <h3>&lt;プロジェクト内容&gt;</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+
+        <div class="created-at">
+          <p>2021/04/02 00:00:00</p>
+        </div>
+
+        <div class="more">
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="index-post-header">
+          <h2>プロジェクト名４</h2>
+          <div class="user-name">
+            <a href="#">投稿者の名前</a>
+          </div>
+        </div>
+        <div class="post-tags">
+          <div class="post-tag">
+            <a href="#">タグ１</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ２</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ３</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ４</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ５</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ６</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ７</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ８</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ９</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ１０</a>
+          </div>
+        </div>
+        <div class="post-info">
+          <h3>&lt;プロジェクト内容&gt;</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+
+        <div class="created-at">
+          <p>2021/04/02 00:00:00</p>
+        </div>
+
+        <div class="more">
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="index-post-header">
+          <h2>プロジェクト名５</h2>
+          <div class="user-name">
+            <a href="#">投稿者の名前</a>
+          </div>
+        </div>
+        <div class="post-tags">
+          <div class="post-tag">
+            <a href="#">タグ１</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ２</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ３</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ４</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ５</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ６</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ７</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ８</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ９</a>
+          </div>
+          <div class="post-tag">
+            <a href="#">タグ１０</a>
+          </div>
+        </div>
+        <div class="post-info">
+          <h3>&lt;プロジェクト内容&gt;</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+
+        <div class="created-at">
+          <p>2021/04/02 00:00:00</p>
+        </div>
+
+        <div class="more">
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="copyrights">Copyright © TEAM-B All rights reserved.</p>
+</footer>
