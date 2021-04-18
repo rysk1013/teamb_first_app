@@ -4,7 +4,7 @@ header {
   background: linear-gradient(to right, #006992 0%, #298AAA 34%, #51ACC2 58%, #7ACDDA 100%);
   width: 100%;
   height: 100px;
-  padding: 20px 0;
+  padding: 0 20px;
 }
 .header-inner {
   height: 100%;

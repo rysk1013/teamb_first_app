@@ -1,0 +1,59 @@
+<%= render 'shared/header' %>
+
+<div class="projects-index-main">
+  <div class="side-bar">
+    <div class="side-contents">
+      <div class="side-search-box">
+        <label for=""></label>
+        <input class="side-input" type="text" placeholder="キーワード">
+        <input type="submit", value="検索" class="side-submit">
+      </div>
+
+      <div class="side-nav">
+        <a href="#">マイページ</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav１</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav２</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav３</a>
+      </div>
+      <div class="side-nav">
+        <a href="#">nav４</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="main-title">
+      <h1 class="info-heading">お知らせ</h1>
+    </div>
+
+    <div class="info">
+      <p>インフォメーションが入ります</p>
+    </div>
+
+    <div class="posts-heading-wrapper">
+      <div class="main-title">
+        <h1>投稿一覧</h1>
+      </div>
+
+      <div class="post-new">
+        <%= link_to "新規投稿作成", new_project_path %>
+      </div>
+    </div>
+
+    <div class="posts">
+
+      <%= render 'post' %>
+      <%= render 'post' %>
+      <%= render 'post' %>
+
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
