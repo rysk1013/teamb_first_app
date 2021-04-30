@@ -14,6 +14,8 @@ class User < ApplicationRecord
   end
 
   has_many :projects, through: :join_lists
+  has_many :projects, through: :join_requests
+  
   has_many :join_lists, dependent: :destroy
   has_many :join_requests, dependent: :destroy
   
