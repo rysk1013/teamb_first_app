@@ -13,6 +13,8 @@ class User < ApplicationRecord
     validates :password_confirmation
   end
 
-  has_many :projects
+  has_many :projects, through: :join_lists
+  has_many :join_lists, dependent: :destroy
+  has_many :join_requests, dependent: :destroy
   
 end

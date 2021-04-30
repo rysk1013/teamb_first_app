@@ -7,6 +7,12 @@ class Project < ApplicationRecord
     validates :content
   end
 
-  belongs_to :user
+  has_many :users, through: :join_lists
+  has_many :join_lists, dependent: :destroy
+  has_many :join_requests, dependent: :destroy
+
+  def user_join_list?(user)
+    users.include?(user)
+  end
 
 end
