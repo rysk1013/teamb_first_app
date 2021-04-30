@@ -4,40 +4,42 @@
       <h1>新規投稿</h1>
     </div>
 
-    <div class="form-box">
-      <label class="input-label">プロジェクト名<br />
-        <input type="text" class="input-default">
-      </label>
-    </div>
-
-    <div class="form-row2">
-      <div class="form-box set-num">
-        <label class="input-label">参加人数の設定<br />
-          <input type="text" class="input-num">
+    <%= form_with model: @project, url: projects_path, local: true do |f| %>
+      <div class="form-box">
+        <label class="input-label">プロジェクト名<br />
+          <%= f.text_field :name, class: "input-default" %>
         </label>
       </div>
 
-      <div class="form-box set-num">
-        <label class="input-label">募集期間の設定<br />
-          <input type="text" class="input-num">
+      <div class="form-row2">
+        <div class="form-box set-num">
+          <label class="input-label">参加人数の設定<br />
+            <%= f.number_field :member_lim, class: "input-num" %>
+          </label>
+        </div>
+
+        <div class="form-box set-num">
+          <label class="input-label">募集期間の設定<br />
+            <%= f.datetime_field :project_lim, class: "input-num" %>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <label class="input-label">プロジェクト内容<br />
+          <%= f.text_area :content, class: "textarea-default" %>
         </label>
       </div>
-    </div>
 
-    <div class="form-box">
-      <label class="input-label">プロジェクト内容<br />
-        <textarea class="textarea-default"></textarea>
-      </label>
-    </div>
+      <div class="form-box last-form-box">
+        <label class="input-label">タグ<br />
+          <input type="text" class="input-default">
+        </label>
+      </div>
 
-    <div class="form-box last-form-box">
-      <label class="input-label">タグ<br />
-        <input type="text" class="input-default">
-      </label>
-    </div>
-
-    <div class="form-submit">
-      <input class="form-submit-btn" type="submit" value="作成する">
-    </div>
+      <div class="form-submit">
+        <%= f.submit "作成する", class: "form-submit-btn" %>
+      </div>
+    <% end %>
   </div>
 </div>
