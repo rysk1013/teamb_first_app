@@ -1,54 +1,55 @@
-<div class="post">
-  <div class="index-post-header">
-    <h2>プロジェクト名１</h2>
-    <div class="user-name">
-      <a href="#">投稿者の名前</a>
-    </div>
-  </div>
-  <div class="post-tags">
-    <div class="post-tag">
-      <a href="#">タグ１</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ２</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ３</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ４</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ５</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ６</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ７</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ８</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ９</a>
-    </div>
-    <div class="post-tag">
-      <a href="#">タグ１０</a>
-    </div>
-  </div>
-  <div class="post-info">
-    <h3>&lt;プロジェクト内容&gt;</h3>
-    <p>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-    </p>
-  </div>
 
-  <div class="created-at">
-    <p>2021/04/02 00:00:00</p>
-  </div>
+  <div class="post">
+    <div class="index-post-header">
+      <h2><%= project.name %></h2>
+      <div class="user-name">
+        <%= link_to project.user.nickname, user_path(project.user_id) %>
+      </div>
+    </div>
+    <div class="post-tags">
+      <div class="post-tag">
+        <a href="#">タグ１</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ２</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ３</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ４</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ５</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ６</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ７</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ８</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ９</a>
+      </div>
+      <div class="post-tag">
+        <a href="#">タグ１０</a>
+      </div>
+    </div>
+    <div class="post-info">
+      <h3>&lt;プロジェクト内容&gt;</h3>
+      <p>
+        <%= project.content %>
+      </p>
+    </div>
 
-  <div class="more">
-    <a href="#">詳細を見る</a>
+    <div class="created-at">
+      <p><%= project.project_lim %></p>
+    </div>
+
+    <div class="more">
+      <%= link_to '詳細を見る', project_path(project.id) %>
+    </div>
   </div>
-</div>

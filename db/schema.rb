@@ -14,12 +14,13 @@ ActiveRecord::Schema.define(version: 2021_04_10_213747) do
 
   create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.text "intro", null: false
     t.text "content", null: false
-    t.integer "project_lim", null: false
+    t.date "project_lim", null: false
     t.integer "member_lim", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -36,4 +37,5 @@ ActiveRecord::Schema.define(version: 2021_04_10_213747) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "projects", "users"
 end
