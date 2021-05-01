@@ -14,7 +14,7 @@ class Project < ApplicationRecord
   has_many :join_requests, dependent: :destroy
 
   def already_requested?(user)
-    self.join_requests.exists?(user_id: user.id)
+    self.join_lists.exists?(user_id: user.id)
   end
 
 end

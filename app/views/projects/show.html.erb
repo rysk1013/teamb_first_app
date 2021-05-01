@@ -56,7 +56,7 @@
     </div>
     <div class="post-footer">
       <div class="post-footer-btn-area">
-        <% if user_signed_in? && @project.user_join_list?(current_user) %>
+        <% if user_signed_in? && @project.already_requested?(current_user) %>
           <%= link_to '退会する', project_join_list_path(@project.id, @join_list), method: :delete, class: "footer-btn01" %>
         <% elsif user_signed_in? %>
           <% if @join_request %>
