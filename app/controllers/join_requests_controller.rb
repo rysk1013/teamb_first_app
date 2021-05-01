@@ -6,8 +6,8 @@ class JoinRequestsController < ApplicationController
   end
 
   def destroy
-    @request = JoinRequest.find(params[:id])
-    @request.destroy!
+    @request = JoinRequest.find_by(user_id: current_user.id)
+    @request.destroy
     @project = Project.find(params[:project_id])
     redirect_to project_path(@project.id)
   end

@@ -19,6 +19,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @join_request = @project.join_requests
+    
   end
 
   def edit
