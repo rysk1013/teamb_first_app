@@ -7,11 +7,12 @@ class Project < ApplicationRecord
     validates :content
   end
 
-  has_many :users, through: :join_lists
-  has_many :users, through: :join_requests
-
-  has_many :join_lists, dependent: :destroy
   has_many :join_requests, dependent: :destroy
+  has_many :join_lists, dependent: :destroy
+
+  has_many :users, through: :join_requests
+  has_many :users, through: :join_lists
+
 
   def already_listed?(user)
     self.join_lists.exists?(user_id: user.id)

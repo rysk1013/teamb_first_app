@@ -36,6 +36,9 @@
               <th class="post-table-title">人数</th>
               <td class="post-table-data"><%= @project.member_lim %></td>
             </tr>
+            <% if @project.user_id == current_user.id %>
+              <%= link_to "削除ボタン（仮）", project_path(@project.id), method: :delete %>
+            <% end %>
           </tbody>
         </table>
       </div>
