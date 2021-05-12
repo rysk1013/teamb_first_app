@@ -37,62 +37,35 @@
             <h2>マイプロジェクト参加者一覧</h2>
           </a>
         </div>
-        <div class="myteam-list">
-          <div class="myteam-box">
-            <div class="myteam-name">
-              自分の作成チーム名
-            </div>
-            <div class="participant-user">
-              <ul>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="myteam-box">
-            <div class="myteam-name">
-              自分の作成チーム名
-            </div>
-            <div class="participant-user">
-              <ul>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-                <li>
-                  <div class="index-user-name">
-                    <a href="#" , class="participant-user-name">ユーザー名</a>
-                  </div>
-                  <button type="button" , class="approval-btn">承認する</button>
-                </li>
-              </ul>
+        <% @project.each do |project| %>
+          <div class="myteam-list">
+            <div class="myteam-box">
+              <div class="myteam-name">
+                <%= project.name %>
+              </div>
+              <div class="participant-user">
+                <ul>
+                  <%# @list.each do |l| %>
+                    <li>
+                      <div class="index-user-name">
+                        <%#= link_to l.nickname, class: "participant-user-name" %>
+                      </div>
+                      <button type="button" , class="approval-btn">承認する</button>
+                    </li>
+                  <%# end %>
+                  <%# @request.each do |r| %>
+                    <li>
+                      <div class="index-user-name">
+                        <%#= link_to r.nickname, class: "participant-user-name" %>
+                      </div>
+                      <button type="button" , class="approval-btn">承認する</button>
+                    </li>
+                  <%# end %>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <div class="entry-project">
         <div class="entry-title">

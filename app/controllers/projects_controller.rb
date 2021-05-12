@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
+      current_user.join_lists.create(project_id: @project.id)
       redirect_to root_path
     else
       render :new
@@ -19,12 +20,20 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @join_request = @project.join_requests
+    @join_list = @project.join_lists
   end
 
   def edit
   end
 
   def update
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to root_path
   end
 
   private
