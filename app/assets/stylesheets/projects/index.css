@@ -183,9 +183,9 @@ header {
 }
 
 .post-new {
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid #333;
-  padding: 10px;
+  padding: 7px 9px;
   margin-left: 20px;
   color: #fff;
   text-shadow: 0 0 2px #000, 0 0 10px #000;
@@ -200,6 +200,8 @@ header {
   text-decoration: none;
   border-style: solid;
   border-width: 1px;
+  display: flex;
+  align-items: center;
 }
 
 .posts {
@@ -241,6 +243,10 @@ header {
   border: 1px solid #000;
   padding-left: 10px;
   margin-right: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
 }
 
 .user-name {
@@ -250,6 +256,10 @@ header {
   line-height: 50px;
   border: 1px solid #000;
   padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
 }
 
 .post-tags {
@@ -268,7 +278,15 @@ header {
 }
 
 .post-info {
-  height: 60%;
+  height: 64%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+
+.post-info-content{
+  overflow-wrap: anywhere;
 }
 
 .post-info h3 {
