@@ -4,12 +4,12 @@
   <div class="user-main">
     <nav class="left-menu">
       <ul class="user-main-left">
-          <li><a href="#myteam_title", class="mypage-menu-item">マイプロジェクト参加者一覧</a></li>
-          <li><a href="#entry_title", class="mypage-menu-item">参加したプロジェクト</a></li>
+        <li><%= link_to "トップページ", href="/" , class:"mypage-menu-item" %></li>
         <% if @user.id == current_user.id %>
-          <li><%= link_to "アカウント編集", href="#" , class:"mypage-menu-item" %></li>
+          <li><%= link_to "アカウント編集", edit_user_registration_path, method: :get, class: "mypage-menu-item" %></li>
         <% end %>
-          <li><%= link_to "トップページ", href="/" , class:"mypage-menu-item" %></li>
+        <%# <li><a href="#myteam_title", class="mypage-menu-item">マイプロジェクト参加者一覧</a></li>
+        <li><a href="#entry_title", class="mypage-menu-item">参加したプロジェクト</a></li> %>
       </ul>
     </nav>
     <main class="center-main">
