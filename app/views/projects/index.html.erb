@@ -9,25 +9,19 @@
         <input type="submit", value="検索" class="side-submit">
       </div>
 
-      <div class="side-nav">
-        <% if user_signed_in? %>
-          <%= link_to "マイページ", user_path(current_user.id) %>
-        <% else %>
-          <%= link_to "トップページ", root_path %>
-        <% end %>
-      </div>
-      <div class="side-nav">
-        <%= link_to "参加プロジェクト一覧"%>
-      </div>
-      <div class="side-nav">
-        <%= link_to "参加申請一覧"%>
-      </div>
-      <%# <div class="side-nav">
-        <a href="#">nav３</a>
-      </div>
-      <div class="side-nav">
-        <a href="#">nav４</a>
-      </div> %>
+      <nav class="left-menu-main">
+        <ul class="user-main-left">
+          <% if user_signed_in? %>
+            <li><%= link_to "マイページ", user_path(current_user.id), class: "mypage-menu-item" %></li>
+          <% else %>
+            <li><%= link_to "トップページ", root_path, class: "mypage-menu-item"  %></li>
+          <% end %>
+          <li><%= link_to "参加プロジェクト一覧", class: "mypage-menu-item" %>
+          <li><%= link_to "参加申請一覧", class: "mypage-menu-item" %>
+      <%# <%# <div class="side-nav"> %>
+        <%# <a href="#">nav３</a> %>
+        </ul>
+      </nav>
     </div>
   </div>
 
