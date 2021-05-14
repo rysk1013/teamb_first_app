@@ -36,9 +36,6 @@
               <th class="post-table-title">人数</th>
               <td class="post-table-data"><%= @project.member_lim %></td>
             </tr>
-            <% if @project.user_id == current_user.id %>
-              <%= link_to "削除ボタン（仮）", project_path(@project.id), method: :delete %>
-            <% end %>
           </tbody>
         </table>
       </div>
@@ -67,6 +64,10 @@
           <% else %>
             <%= link_to '参加申請', project_join_requests_path(@project), method: :post, class: "footer-btn02" %>
           <% end %>
+        <% end %>
+        <% if @project.user_id == current_user.id %>
+          <%= link_to "編集", edit_project_path(@project.id), method: :get, class: "footer-btn03" %>
+          <%= link_to "削除", project_path(@project.id), method: :delete, class: "footer-btn04" %>
         <% end %>
       </div>
     </div>

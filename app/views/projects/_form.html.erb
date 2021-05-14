@@ -4,7 +4,7 @@
       <h1>新規投稿</h1>
     </div>
 
-    <%= form_with model: @project, url: projects_path, local: true do |f| %>
+    <%= form_with model: @project, local: true do |f| %>
       <div class="form-box">
         <label class="input-label">プロジェクト名<br />
           <%= f.text_field :name, class: "input-default" %>

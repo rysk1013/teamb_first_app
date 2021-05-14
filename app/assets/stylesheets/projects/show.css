@@ -165,7 +165,7 @@ textarea {
   display: inline-block;
   text-align: center;
   font-size: 14px;
-  padding: 12px 8px 11px 8px;
+  padding: 0 6px;
   margin-right: 6px;
   min-width: 6em;
   border-radius: 2px;
@@ -189,7 +189,7 @@ textarea {
   display: inline-block;
   text-align: center;
   font-size: 14px;
-  padding: 12px 8px 11px 8px;
+  padding: 0 6px;
   margin-right: 6px;
   min-width: 6em;
   border-radius: 2px;
@@ -201,6 +201,54 @@ textarea {
 }
 
 .footer-btn02:hover {
+  opacity: 0.75;
+}
+
+.footer-btn03{
+  color: #fff;
+  text-shadow: 0 0 2px #000, 0 0 10px #000;
+  background-color: #2b6f92;
+  border-color: #25607e;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 6px;
+  margin-right: 6px;
+  min-width: 6em;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+  transition: all 0.1s linear;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.footer-btn03:hover {
+  opacity: 0.75;
+}
+
+.footer-btn04{
+  color: #fff;
+  text-shadow: 0 0 2px #000, 0 0 10px #000;
+  background-color: #2b6f92;
+  border-color: #25607e;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 6px;
+  margin-right: 6px;
+  min-width: 6em;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 40%);
+  transition: all 0.1s linear;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.footer-btn04:hover {
   opacity: 0.75;
 }
 
