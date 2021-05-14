@@ -65,14 +65,14 @@
 
 .post-content-area{
   width: 70%;
-  margin: 10px;
+  margin: 30px;
 }
 
 .post-table-title{
   border: solid 1px #615545;
   padding: 10px; 
   width: 150px;
-  height: 20px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.1);
   color: #004f7c;
   font-size: 14px;
@@ -80,10 +80,21 @@
 
 .post-table-data{
   border: solid 1px #615545;
-  padding: 10px; 
+  padding: 20px 10px 20px 10px; 
   width: calc(100% - 150px);
   font-size: 14px;
 }
+
+.post-table-contents{
+  border: solid 1px #615545;
+  padding: 10px; 
+  width: 150px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #004f7c;
+  font-size: 14px;
+}
+
 
 .post-table{
   border-collapse: collapse;
