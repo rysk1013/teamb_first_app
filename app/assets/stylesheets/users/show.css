@@ -240,3 +240,63 @@ body {
   border-style: solid;
   border-width: 1px;
 }
+
+.myteams,
+.entry-project {
+  width: 80%;
+  margin: 6% auto 6% auto;
+  background: linear-gradient(to bottom, #ece2c8 1%, #ccbf9e 40%, #cebb90 99%);
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 2px #615545;
+  box-shadow: 0 2px 1px rgb(0 0 0 / 30%), 0 6px 6px rgb(0 0 0 / 10%);
+}
+.myteams-title,
+.entry-title {
+  padding: 40px 40px 25px 40px;
+  width: 86%;
+  margin: 0 auto;
+}
+.myteams h2,
+.entry-project h2 {
+  border-bottom: solid 1px #615545;
+  box-shadow: 0 1px 0 white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.myteams-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.myteams-box {
+  width: 70%;
+  margin: 0 auto 30px;
+  background-color: #f2ead5;
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 1px #615545;
+}
+.myteams-name {
+  padding: 10px;
+  border-bottom: solid 1px #615545;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+.participant-users {
+  padding: 10px;
+}
+.participant-users ul li{
+  padding-bottom: 5px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #615545;
+}
+.index-user-names {
+  display: inline-block;
+}
