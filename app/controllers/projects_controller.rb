@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
     joinRequest.each do |r|
       hash = Project.where(id: r.project_id)
       @project << array
+    end
   end
 
   def new
