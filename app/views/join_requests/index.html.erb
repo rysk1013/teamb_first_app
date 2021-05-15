@@ -1,7 +1,33 @@
 <%= render 'shared/header' %>
-<div>
-  <% @joinRequest.each do |r| %>
-    <%= r.user.nickname %>
-  <% end %>
-</div>
+
+<div class="user-main">
+  <main class="center-main">
+    <div class="myteams">
+      <div class="myteams-title">
+        <a id="myteam_title">
+          <h2>プロジェクト申請待ち一覧</h2>
+        </a>
+      </div>
+      <% @joinRequest.each do |r| %>
+        <div class="myteams-list">
+          <div class="myteams-box">
+            <div class="participant-users">
+              <ul>
+                <li>
+                  <div class="index-user-names">
+                    <%= r.user.nickname %>
+                    <%# <%= link_to l.nickname, class: "participant-user-name"　%>
+                  </div>
+                  <button type="button" , class="approval-btn1">承認する</button>
+                  <button type="button" , class="approval-btn2">拒否する</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>  
+
 <%= render 'shared/footer' %>
