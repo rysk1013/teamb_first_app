@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
   end
 
   def projectsRequest
-    joinRequest = joinRequest.where(user_id: current_user.id)
+    joinRequest = JoinRequest.where(user_id: current_user.id)
     @project = []
     joinRequest.each do |r|
       hash = Project.where(id: r.project_id)
