@@ -4,6 +4,24 @@ class ProjectsController < ApplicationController
     @project = Project.includes(:users).order('created_at DESC')
   end
 
+  def projectsList
+      joinList = JoinList.where(user_id: current_user.id)
+      @project = []
+
+      joinList.each do |l|
+        array = Project.where(id: l.project_id)
+        @project << array
+      end
+  end
+
+  def projectsRequest
+    joinRequest = joinRequest.where(user_id: current_user.id)
+    @project = []
+    joinRequest.each do |r|
+      hash = Project.where(id: r.project_id)
+      @project << array
+  end
+
   def new
     @project = Project.new
   end
