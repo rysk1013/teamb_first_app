@@ -32,52 +32,43 @@
         </div>
       </div>
 
-      <div class="myteam">
+      <%# <div class="myteam">
         <div class="myteam-title">
           <a id="myteam_title">
             <h2>マイプロジェクト参加者一覧</h2>
           </a>
         </div>
         <% @project.each do |project| %>
-          <div class="myteam-list">
+          <%# <div class="myteam-list">
             <div class="myteam-box">
               <div class="myteam-name">
                 <%= project.name %>
-              </div>
+              <%# </div>
               <div class="participant-user">
                 <ul>
                   <%# <% @list.each do |l| %>
-                    <li>
+                    <%# <li>
                       <div class="index-user-name">
-                        <%# <%= link_to l.nickname, class: "participant-user-name"　%> %>
-                      </div>
-                      <button type="button" , class="approval-btn1">承認する</button>
+                        <%# <%= link_to l.nickname, class: "participant-user-name"　%>
+                      <%# </div> %>
+                      <%# <button type="button" , class="approval-btn1">承認する</button>
                       <button type="button" , class="approval-btn2">拒否する</button>
                     </li>
                   <%# end %>
-                  <%# @request.each do |r| %>
-                    <li>
-                      <div class="index-user-name">
-                        <%#= link_to r.nickname, class: "participant-user-name" %>
-                      </div>
-                      <button type="button" , class="approval-btn1">承認する</button>
-                      <button type="button" , class="approval-btn2">拒否する</button>
-                    </li>
-                  <%# end %>
-                </ul>
+                <%# </ul>
               </div>
             </div>
           </div>
         <% end %>
-      </div>
+      <%# </div> %>
 
-      <div class="entry-project">
+      <%# <div class="entry-project">
         <div class="entry-title">
           <a id="entry_title">
             <h2>参加プロジェクト一覧</h2>
           </a>
         </div>
-      </div>
+      </div> %>
 
       <div class="page-bottom"></div>
     </main>
