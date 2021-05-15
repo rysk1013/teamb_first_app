@@ -1,8 +1,8 @@
 class JoinListsController < ApplicationController
 
-  def show
-    # @user = User.find(params[:id])
-    # @project = @user.projects.where(user_id: @user.id)
+  def index
+    @project = Project.find(params[:project_id])
+    @joinList = JoinList.where(project_id: @project.id)
   end
 
 end

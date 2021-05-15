@@ -1,5 +1,10 @@
 class JoinRequestsController < ApplicationController
 
+  def index
+    @project = Project.find(params[:project_id])
+    @joinRequest = JoinRequest.where(project_id: @project.id)
+  end
+
   def create
     current_user.join_requests.create(project_id: join_request_params[:project_id])
     redirect_to project_path(join_request_params[:project_id])
@@ -12,10 +17,7 @@ class JoinRequestsController < ApplicationController
     redirect_to project_path(@project.id)
   end
 
-  def show
-    # @user = User.find(params[:id])
-    # @project = @user.projects.where(user_id: @user.id)
-  end
+
 
   private
   def join_request_params

@@ -69,6 +69,11 @@
           <%= link_to "編集", edit_project_path(@project.id), method: :get, class: "footer-btn03" %>
           <%= link_to "削除", project_path(@project.id), method: :delete, class: "footer-btn04" %>
         <% end %>
+
+        <div>
+          <%= link_to "申請待ち一覧", project_join_requests_path(@project.id) %>
+          <%= link_to "参加者一覧", project_join_lists_path(@project.id) %>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,7 @@
+<%= render 'shared/header' %>
+<div>
+  <% @joinRequest.each do |r| %>
+    <%= r.user.nickname %>
+  <% end %>
+</div>
+<%= render 'shared/footer' %>
