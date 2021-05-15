@@ -12,6 +12,11 @@ class JoinRequestsController < ApplicationController
     redirect_to project_path(@project.id)
   end
 
+  def show
+    # @user = User.find(params[:id])
+    # @project = @user.projects.where(user_id: @user.id)
+  end
+
   private
   def join_request_params
     params.permit(:project_id).merge(user_id: current_user.id)

@@ -7,7 +7,7 @@
         <img src="" class="post-img">
       </div>
       <div class="post-title-area">
-        <h2 class="post-title">プロジェクト名</h2>
+        <h2 class="post-title">プロジェクト</h2>
       </div>
     </div>
     <div class="post-main">
@@ -18,12 +18,12 @@
               <th class="post-table-title">プロジェクト名</th>
               <td class="post-table-data"><%= @project.name %></td>
             </tr>
-            <tr>
+            <%# <tr>
               <th class="post-table-title">プロジェクト紹介</th>
               <td class="post-table-data">紹介文が入ります</td>
-            </tr>
+            </tr> %>
             <tr>
-              <th class="post-table-title">プロジェクト内容</th>
+              <th class="post-table-contents">プロジェクト内容</th>
               <td class="post-table-data">
                 <%= @project.content %>
               </td>
@@ -36,9 +36,6 @@
               <th class="post-table-title">人数</th>
               <td class="post-table-data"><%= @project.member_lim %></td>
             </tr>
-            <% if @project.user_id == current_user.id %>
-              <%= link_to "削除ボタン（仮）", project_path(@project.id), method: :delete %>
-            <% end %>
           </tbody>
         </table>
       </div>
@@ -67,6 +64,10 @@
           <% else %>
             <%= link_to '参加申請', project_join_requests_path(@project), method: :post, class: "footer-btn02" %>
           <% end %>
+        <% end %>
+        <% if @project.user_id == current_user.id %>
+          <%= link_to "編集", edit_project_path(@project.id), method: :get, class: "footer-btn03" %>
+          <%= link_to "削除", project_path(@project.id), method: :delete, class: "footer-btn04" %>
         <% end %>
       </div>
     </div>

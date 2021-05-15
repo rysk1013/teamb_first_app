@@ -4,4 +4,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @project = @user.projects.where(user_id: @user.id)
   end
+
+  def edit
+  end
 end

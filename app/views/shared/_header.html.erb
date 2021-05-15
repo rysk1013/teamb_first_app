@@ -5,7 +5,7 @@
         <%= link_to image_tag("/images/header_logo.png", class: "header-logo-img"), root_path %>
       </div>
       <% if user_signed_in? %>
-        <span>ログインユーザー: <%= link_to "テストユーザー" %></span>
+        <span>ログインユーザー: <%= link_to current_user.nickname %></span>
       <% end %>
     </div>
     <div class="header-right">
