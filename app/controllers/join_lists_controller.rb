@@ -11,6 +11,13 @@ class JoinListsController < ApplicationController
     redirect_to project_join_requests_path(@join.project)
   end
 
+  def destroy
+    @joinList = JoinList.find(params[:id])
+    @joinList.destroy
+    @project = Project.find(params[:project_id])
+    redirect_to root_path
+  end
+
 
   private
 
