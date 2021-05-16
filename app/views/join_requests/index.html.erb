@@ -16,13 +16,21 @@
                 <li>
                   <div class="index-user-names">
                     <%= r.user.nickname %>
-                    <%# <%= link_to l.nickname, class: "participant-user-name"　%>
                   </div>
-                  <button type="button" , class="approval-btn1">
-                    <%= link_to "承認する", project_join_lists_path(r.project, user_id: r.user.id, join_request_id: r.id), method: :post %>
-                  </button>
-                    <button type="button" , class="approval-btn2"><%= link_to "拒否する", project_join_request_path(r.project, r), method: :delete %>
-                  </button>
+                  <% if user_signed_in? %>
+                    <% if @project.user_id == current_user.id %>
+                      <button type="button" , class="approval-btn1">
+                        <%= link_to "承認する", project_join_lists_path(r.project, user_id: r.user.id, join_request_id: r.id), method: :post %>
+                      </button>
+                      <button type="button" , class="approval-btn2">
+                        <%= link_to "拒否する", project_join_request_path(r.project, r), method: :delete %>
+                      </button>
+                    <% end %>
+                  <% else %>
+                    <button type="button" , class="approval-btn2">
+                      <%= link_to "申請取消", project_join_request_path(r.project, r), method: :delete %>
+                    </button>
+                  <% end %>
                 </li>
               </ul>
             </div>

@@ -2,6 +2,7 @@ class JoinRequestsController < ApplicationController
 
   def index
     @joinRequest = JoinRequest.where(project_id: params[:project_id])
+    @project = Project.find(params[:project_id])
   end
 
   def create
