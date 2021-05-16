@@ -60,7 +60,7 @@
           <%= link_to '退会する', project_join_list_path(@project.id, @join_list), method: :delete, class: "footer-btn01" %>
         <% elsif user_signed_in? %>
           <% if @project.already_requested?(current_user) %>
-            <%= link_to '申請取消', project_join_request_path(@project.id, @join_request), method: :delete, class: "footer-btn01" %>
+            <%= link_to '申請取消', project_join_request_path(@project, @join_request), method: :delete, class: "footer-btn01" %>
           <% else %>
             <%= link_to '参加申請', project_join_requests_path(@project), method: :post, class: "footer-btn02" %>
           <% end %>

@@ -1,8 +1,7 @@
 class JoinRequestsController < ApplicationController
 
   def index
-    @project = Project.find(params[:project_id])
-    @joinRequest = JoinRequest.where(project_id: @project.id)
+    @joinRequest = JoinRequest.where(project_id: params[:project_id])
   end
 
   def create
@@ -11,17 +10,20 @@ class JoinRequestsController < ApplicationController
   end
 
   def destroy
-    @request = JoinRequest.find_by(user_id: current_user.id)
+    if /^[+-]?[0-9]+$/ =~ params[:id]
+      @request = JoinRequest.find(params[:id])
+    else
+      @request = JoinRequest.find_by(user_id: current_user.id)
+    end
     @request.destroy
     @project = Project.find(params[:project_id])
     redirect_to project_path(@project.id)
   end
 
-
-
   private
+
   def join_request_params
-    params.permit(:project_id).merge(user_id: current_user.id)
+    params.permit(:project_id)
   end
 
 
