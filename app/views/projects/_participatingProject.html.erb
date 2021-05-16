@@ -1,0 +1,35 @@
+<% @project.each do |l| %>
+  <% l.each do |f| %>
+    <div class="post2">
+      <div class="index-post-header2">
+        <h2><%= f.name %></h2>
+        <div class="user-name2">
+          <%#= link_to project.user.nickname %>
+        </div>
+      </div>
+      
+      <div class="post-info2">
+        <h3>&lt;プロジェクト内容&gt;</h3>
+        <p class = post-info-content2>
+          <%= f.content %>
+        </p>
+      </div>
+
+      <div class="created-at2">
+        <p><%= f.project_lim %></p>
+      </div>
+
+      <div class="more2">
+        <%= link_to '詳細を見る', project_path(@project) %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+<%# <% @project.each do |l| %>
+  <%# <% l.each do |f| %>
+    <%# <%= f.name %>
+  <%# <% end %>
+<%# <% end %>
