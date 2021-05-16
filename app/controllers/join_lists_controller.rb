@@ -12,7 +12,7 @@ class JoinListsController < ApplicationController
   end
 
   def destroy
-    @joinList = JoinList.find(params[:id])
+    @joinList = JoinList.find_by(user_id: current_user.id)
     @joinList.destroy
     @project = Project.find(params[:project_id])
     redirect_to root_path
