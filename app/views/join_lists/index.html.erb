@@ -15,8 +15,7 @@
               <ul>
                 <li>
                   <div class="index-user-names">
-                    <%= l.user.nickname %>
-                    <%# <%= link_to l.nickname, class: "participant-user-name"　%>
+                    <%= link_to l.user.nickname, user_path(l.user_id), class: "participant-user-name" %>
                   </div>
                 </li>
               </ul>

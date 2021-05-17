@@ -1,0 +1,52 @@
+<%= render 'shared/header' %>
+<div class="myteam">
+  <div class="myteam-title">
+    <a id="myteam_title">
+      <h2>マイプロジェクト参加者一覧</h2>
+    </a>
+  </div>
+  <% @project.each do |project| %>
+      <div class="myteam-list">
+        <div class="myteam-box">
+          <div class="myteam-name">
+            <%= project.name %>
+          </div>
+          <div class="participant-user">
+            <ul>
+              <% @userList.each do |lists| %>
+                <% lists.each do |list| %>
+                  <% if project.id == list.project_id %>
+                    <li>
+                      <div class="index-user-name">
+                        <%= link_to list.user.nickname, user_path(list.user_id), class: "participant-user-name" %>
+                      </div>
+                    </li>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% @userRequest.each do |requests| %>
+                <% requests.each do |request| %>
+                  <% if project.id == request.project_id %>
+                    <li>
+                      <div class = "index-user-name" >
+                        <%= link_to request.user.nickname, user_path(request.user_id), class: "participant-user-name" %>
+                      </div>
+                      <% if user_signed_in? && project.user_id == current_user.id %>
+                        <button type="button" , class="approval-btn1">
+                          <%= link_to "承認する", project_join_lists_path(project, user_id: request.user_id, join_request_id: request.id), method: :post %>
+                        </button>
+                        <button type="button" , class="approval-btn2">
+                          <%= link_to "拒否する", project_join_request_path(project, request), method: :delete %>
+                        </button>
+                      <% end %>
+                    </li>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div> 
+<%= render 'shared/footer' %>

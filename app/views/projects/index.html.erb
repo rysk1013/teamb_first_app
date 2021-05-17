@@ -14,7 +14,7 @@
           <% if user_signed_in? %>
             <li><%= link_to "マイページ", user_path(current_user.id), class: "mypage-menu-item" %></li>
             <li><%= link_to "参加プロジェクト一覧", projectsList_projects_path, class: "mypage-menu-item" %></li>
-          <li><%= link_to "マイプロジェクト参加者一覧", projectsRequest_projects_path, class: "mypage-menu-item" %></li>
+          <li><%= link_to "マイプロジェクト参加者一覧", projectsJoining_projects_path, class: "mypage-menu-item" %></li>
           <% else %>
             <li><%= link_to "トップページ", root_path, class: "mypage-menu-item"  %></li>
           <% end %>

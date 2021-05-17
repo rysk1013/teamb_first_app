@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :projects do
     collection do
       get "projectsList"
-      get "projectsRequest"
+      get "projectsJoining"
     end
     resources :join_lists, only: [:index, :create, :destroy, :show]
     resources :join_requests, only: [:index, :create, :destroy, :show]
