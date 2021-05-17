@@ -172,6 +172,12 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.myteam-lists {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 7% 0 3% 0%;
+}
 .myteam-box {
   width: 80%;
   margin: 0 auto 30px;
@@ -183,6 +189,16 @@ body {
 .myteam-name {
   padding: 10px;
   border-bottom: solid 1px #615545;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+
+}
+.myteam-name1 {
+  padding: 10px;
+  border-bottom: solid 2px #615545;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;

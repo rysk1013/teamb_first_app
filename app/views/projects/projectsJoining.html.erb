@@ -1,14 +1,33 @@
 <%= render 'shared/header' %>
-<div class="myteam">
-  <div class="myteam-title">
-    <a id="myteam_title">
-      <h2>マイプロジェクト参加者一覧</h2>
-    </a>
+
+<div class="projects-index-main">
+  <div class="side-bar">
+    <div class="side-contents">
+      <nav class="left-menu-main">
+        <ul class="user-main-left">
+          <% if user_signed_in? %>
+            <li><%= link_to "トップページ", root_path, class: "mypage-menu-item"  %></li>
+            <li><%= link_to "マイページ", user_path(current_user.id), class: "mypage-menu-item" %></li>
+            <li><%= link_to "参加プロジェクト一覧", projectsList_projects_path, class: "mypage-menu-item" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <% @project.each do |project| %>
-      <div class="myteam-list">
+
+  <div class="main-container">
+
+    <div class="posts-heading-wrapper">
+      <div class="main-title">
+        <h1>マイプロジェクト参加者一覧</h1>
+      </div>
+    </div>
+
+    <div class="posts1">
+      <% @project.each do |project| %>
+      <div class="myteam-lists">
         <div class="myteam-box">
-          <div class="myteam-name">
+          <div class="myteam-name1">
             <%= project.name %>
           </div>
           <div class="participant-user">
@@ -47,6 +66,11 @@
           </div>
         </div>
       </div>
-  <% end %>
-</div> 
+      <% end %>
+    </div>
+
+    </div>
+  </div>
+</div>
+
 <%= render 'shared/footer' %>

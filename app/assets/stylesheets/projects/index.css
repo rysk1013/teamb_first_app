@@ -218,6 +218,18 @@ header {
   flex-flow: wrap row;
 }
 
+.posts1 {
+  width: 100%;
+  justify-content: space-between;
+  flex-flow: wrap row;
+  margin: 6% auto 6% auto;
+  background: linear-gradient(to bottom, #ece2c8 1%, #ccbf9e 40%, #cebb90 99%);
+  background-size: auto, cover;
+  border-radius: 3px;
+  border: solid 2px #615545;
+  box-shadow: 0 2px 1px rgb(0 0 0 / 30%), 0 6px 6px rgb(0 0 0 / 10%);
+}
+
 .post {
   background: linear-gradient(to bottom, #ece2c8 1%, #ccbf9e 40%, #cebb90 99%);
   width: calc((100% - 25px) / 2);
