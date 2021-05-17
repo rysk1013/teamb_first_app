@@ -7,19 +7,22 @@ class ProjectsController < ApplicationController
   def projectsList
       joinList = JoinList.where(user_id: current_user.id)
       @project = []
-
       joinList.each do |l|
-        array = Project.where(id: l.project_id)
-        @project << array
+        @project << Project.where(id: l.project_id)
       end
   end
 
-  def projectsRequest
-    joinRequest = JoinRequest.where(user_id: current_user.id)
-    @project = []
-    joinRequest.each do |r|
-      hash = Project.where(id: r.project_id)
-      @project << array
+  def projectsJoining
+    @project = Project.where(user_id: current_user.id)
+
+    @userList = []
+    @project.each do |project|
+      @userList << JoinList.where(project_id: project.id).includes(:user)
+    end
+
+    @userRequest = []
+    @project.each do |project|
+      @userRequest << JoinRequest.where(project_id: project.id).includes(:user)
     end
   end
 
